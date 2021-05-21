@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Login Form</title>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<style>
+body{
+  margin:0;
+  padding:0;
+  text-align:center;
+  background:url('https://cdn.hipwallpaper.com/i/35/93/EG5d4m.jpg');
+  background-size:cover;
+  background-position:center
+ font-family:sans-serrif;
+
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+  <div class="contact-title">
+ <br><br>
+   <h1> Login</h1>
+  </div>
+   <br><br>
+  <div class="login-form">
+   <form id="login-form" action="authentication.php" name="f1" onsubmit="return validation()" method="POST">
+   <label for="Name">User Name: </label>
+   <input  type="text" id="Name"  name="user" class="form-control" place-holder="Your Name">
+   <br><br>
+ <label for="password">Password: </>
+   <input type="password" id="password" name="pass" class="form-control" /><br><br>
+
+ <br><br>
+  <input type="submit" name="Login" class="form-control submit" value="Submit">
+   
+
+  </form>
+
+ </div>
+
+ <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+
+
+</body>
+
+</html>
